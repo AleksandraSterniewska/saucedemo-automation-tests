@@ -14,10 +14,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
-
-    trace: 'on-first-retry',
+    baseURL: 'https://www.saucedemo.com',
+    trace: 'on',
   },
 
   /* Configure projects for major browsers */

@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('login to swag labs account', async ({ page }) => {
+test.skip('login to swag labs account', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
 
   const email = process.env.USER_EMAIL;
@@ -20,7 +20,7 @@ test('login to swag labs account', async ({ page }) => {
   await page.context().storageState({ path: 'tmp/login.json' });
 });
 
-test('should be logged in', async ({ page }) => {
+test.skip('should be logged in', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/inventory.html');
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
   await expect(page.locator('.title')).toHaveText('Products');

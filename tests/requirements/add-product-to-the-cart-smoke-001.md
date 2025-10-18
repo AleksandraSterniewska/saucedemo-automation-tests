@@ -18,14 +18,14 @@ The objective of this test is to verify that a user can successfully add product
 
 #### Expected Result:
 
-- "Add to cart" button is changed to the "Remove" button. Additionally, the color of the border and button text has changed from black to red.
-- The number of added products is displayed on the shopping cart icon.
-- The test cleans up after execution by removing the added products from the cart.
+   - "Add to cart" button is changed to the "Remove" button. Additionally, the color of the border and button text has changed from black to red.
+   - The number of added products is displayed on the shopping cart icon.
+   - The test cleans up after execution by removing the added products from the cart.
 
 #### Pre-Requirements:
 
-- The user must be logged in beforehand to access the "Swag Labs" page and add products to the cart.
+   - The user must be logged in beforehand to access the "Swag Labs" page and add products to the cart.
 
 #### Additional Notes:
 
-- Ensure that the test does not leave any residual data by removing the added products from the cart.
+   - Ensure that the test does not leave any residual data by removing the added products from the cart.
