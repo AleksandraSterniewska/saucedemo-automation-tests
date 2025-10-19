@@ -1,4 +1,4 @@
-import { Locator } from '@playwright/test';
+import { expect, Locator } from '@playwright/test';
 import { BaseComponent } from './BaseComponent';
 
 export class HeaderComponent extends BaseComponent {
@@ -9,5 +9,9 @@ export class HeaderComponent extends BaseComponent {
   // Actions
   getShoppingCartBadge(): Locator {
     return this.headerLocator().locator('.shopping_cart_badge');
+  }
+
+  async openShoppingCartPage(): Promise<void> {
+    await this.headerLocator().locator('.shopping_cart_container').click();
   }
 }
