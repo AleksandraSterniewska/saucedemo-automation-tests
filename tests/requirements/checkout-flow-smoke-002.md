@@ -31,7 +31,7 @@ The objective of this test is to verify that a user can successfully complete th
 
 #### Expected Result:
 
-- The order process is successfully complete. The "Checkout: Complete" page is displayed with information: "Thank you for your order!".
+- The order process is successfully complete. The "Checkout: Complete" page is displayed with information: "Your order has been dispatched, and will arrive just as fast as the pony can get there!".
 - The product is not located in the cart. The quantity of the product ordered is not displayed on the shopping cart icon.
 
 #### Pre-Requirements:

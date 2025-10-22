@@ -4,8 +4,7 @@ import { CartBasePage } from "./CartBasePage";
 import { CartContentsComponent } from "../components/CartContentsComponent";
 
 export class CartPage extends CartBasePage {
-  //readonly productListPanel: ProductListComponent;
-  readonly headerPanel: HeaderComponent; // czy mogę użyć header component z poprzedniej strony?
+  readonly headerPanel: HeaderComponent;
   readonly cartContentsPanel: CartContentsComponent;
 
   constructor(protected page: Page) {
@@ -14,5 +13,3 @@ export class CartPage extends CartBasePage {
     this.cartContentsPanel = new CartContentsComponent(page);
   }
 }
-
-//to może być do zmiany, jak nie do usunięcia
