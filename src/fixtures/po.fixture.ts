@@ -1,9 +1,11 @@
 import { test as base } from '@playwright/test';
 import { ILogObj, Logger } from "tslog";
 import { HomePage } from "../pages/HomePage";
+//import { CartPage } from '../pages/CartPage';
 
 interface Pages {
   homePage: HomePage;
+  //cartPage: CartPage;
 }
 
 interface Log {

@@ -23,4 +23,8 @@ export class ProductListComponent extends BaseComponent {
   getRemoveButton(): Locator {
     return this.removeButtonLocator();
   }
+
+  getProductNameFromProductList(): Promise<string> {
+    return this.productListLocator().locator('.inventory_item_name').first().innerText();
+  }
 }
