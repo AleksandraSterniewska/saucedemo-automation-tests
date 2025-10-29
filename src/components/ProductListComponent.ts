@@ -24,8 +24,7 @@ export class ProductListComponent extends BaseComponent {
     return this.removeButtonLocator();
   }
 
-  //testy robione 20.10.2025 - jeśli się nie przyda, to usunąć
-  getProductNameFromProductList(): Locator {
-    return this.productListLocator().locator('.inventory_item_name');//.inputValue();
+  getProductNameFromProductList(): Promise<string> {
+    return this.productListLocator().locator('.inventory_item_name').first().innerText();
   }
 }

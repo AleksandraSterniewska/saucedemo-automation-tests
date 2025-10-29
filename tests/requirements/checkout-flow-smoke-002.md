@@ -16,7 +16,7 @@ The objective of this test is to verify that a user can successfully complete th
 
 3. **Open the cart with the added product:**
    - Click on the shopping cart icon displayed to the right side of the header.
-   - Check title of the added product on the "Your Cart" page.
+   - Check title of the added product on the "Your Cart" page. Compare this title with the name of the added product on the product list page.
 
 4. **Go to the checkout page and fill out of the form:**
    - Click "Checkout" button on the "Your Cart" page.
@@ -24,7 +24,8 @@ The objective of this test is to verify that a user can successfully complete th
    - Enter the last name **"Smith"**.
    - Enter the zip/postal code **"00-000"**.
    - Click "Continue" button.
-   - Check the title of the secondary header on the "Checkout: Overview" page.
+   - Check title of the added product on the "Checkout: Overview" page. Compare this title with the name of the added product on the product list page.
+   - Check the values under the heading: *"Payment Information"*, *"Shipping Information"*, *"Total"*.
 
 5. **Finish the order process:**
    - Click "Finish" button.
@@ -37,8 +38,7 @@ The objective of this test is to verify that a user can successfully complete th
 #### Pre-Requirements:
 
 - The user must be logged in beforehand to access the "Swag Labs" page and successfully complete the order.
-- The user must add product to the cart ("add-product-to-the-cart-smoke-001.md") before execute the order process.
 
 #### Additional Notes:
 
-- Ensure that the test does not leave any residual data by removing the added products from the cart.
+- If the product is in cart on the "Checkout: Complete" page, ensure that the test does not leave any residual data by removing the added products from the cart.

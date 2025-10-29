@@ -18,4 +18,8 @@ export class CheckoutSummaryComponent extends BaseComponent {
     await this.checkoutSummaryLocator().getByRole("button", { name: 'finish' }).click();
     expect(this.page.url()).toContain('/checkout-complete.html');
   }
+
+  async checkProductNameOverview(productNameFromProductList: string): Promise<void> {
+    await expect(this.checkoutSummaryLocator().locator('.inventory_item_name')).toHaveText(productNameFromProductList);
+  }
 }

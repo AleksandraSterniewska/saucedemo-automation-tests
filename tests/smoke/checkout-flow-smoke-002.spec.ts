@@ -35,20 +35,19 @@ test('should order product', { tag: '@orderProduct' }, async ({ page }) => {
   // 2. **Add a product to the cart:**
   await homePage.productListPanel.addProductToCart();
   // 3. **Open the cart with the added product:**
+  const productNameFromProductList = await homePage.productListPanel.getProductNameFromProductList();
   await homePage.headerPanel.openShoppingCartPage();
-  await cartPage.cartContentsPanel.checkProductName(); // tutaj dodać porównanie nazwy produktu ze strony startowej na stronie z koszykiem - obgadać to z Łukaszem, już nie mam pomysłów :(
-
+  await cartPage.cartContentsPanel.checkProductName(productNameFromProductList);
   // 4. **Go to the checkout page and fill out of the form:**
   await cartPage.cartContentsPanel.openCheckoutPage();
   await checkoutPage.checkoutFormPanel.fillCheckoutForm(form);
   await checkoutPage.checkoutFormPanel.openOverviewPage();
+  await overviewPage.checkoutSummaryPanel.checkProductNameOverview(productNameFromProductList);
   await overviewPage.checkoutSummaryPanel.checkPaymentInfo(overview);
-
   // 5. **Finish the order process:**
   await overviewPage.checkoutSummaryPanel.openCompletePage();
 
   // Assert
-  await completePage.checkoutCompletePanel.checkOrderStatus();
   await expect(completePage.checkoutCompletePanel.getCompleteText()).toContainText(completeStatus);
   await expect(completePage.headerPanel.getShoppingCartBadge()).toBeHidden();
 });
